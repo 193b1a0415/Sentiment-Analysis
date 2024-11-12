@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Added Font Awesome -->
+
+
+</head>
+ <script>
+         console.log("Welcome to script");
+
+        function submitTweet() {
+            var tweetInput = document.getElementById('tweet-input').value.trim();
+            if (tweetInput !== '') {
+                var section = document.getElementById('tweet-analyzer');
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Sentiment Analyzer</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">About</a></li> <!-- Updated link -->
+                <li><a href="#features">Features</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Image -->
+    <section id="home" class="hero">
+        <h1>Analyze your Tweet</h1>
+        <a href="#tweet-analyzer" class="cta">Get Started</a>
+    </section>
+
+    <!-- Features Section with Image -->
+    <section id="features" class="features">
+        <h2>Why Use Our Tool?</h2><br>
+        <div class="feature-cards">
+            <div class="card">
+                <h3>Real-Time Analysis</h3>
+                <p> The real-time analysis refers to the process of automatically identifying and understanding the emotional tone in text data as it's being generated.</p>
+            </div>
+            <div class="card">
+                <h3> Understanding Customer Sentiment</h3>
+                <p>Analyze customer reviews, feedback, and social media mentions to understand their feelings towards your product or service.</p>
+            </div>
+            <div class="card">
+                <h3>Product Development</h3>
+                <p> Understand which features customers like or dislike about your product. This feedback can guide product development and innovation.</p>
+            </div>
+            <div class="card">
+                <h3>Social Listening</h3>
+                <p>Sentiment analysis can help brands understand the conversations happening around their industry and participate in discussions relevant to their audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section with Image -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <img src="/static/a.jpg"><br>
+        <div class="steps">
+        </div>
+    </section>
+
+    <!-- Tweet Analyzer Section -->
+    <section id="tweet-analyzer" class="input-section">
+        <h1>Let's Analyze your Tweet</h1><br>
+        <div class="container">
+            <form action="/tweetsDB" method="post">
+                <div class="form-group">
+                    <label for="tweet">Enter Comment/Tweet/Review:</label><br>
+                    <input type="text" id="tweet" name="tweet" required>
+                </div><br><br>
+                 <button type="submit">Analyze</button>
+            </form>
+            {% if sentiment %}
+            <div class="result"><br>
+                Sentiment: {{ sentiment }}
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonials-list">
+            <div class="testimonial">
+                <p>"This Website can help businesses people to understand their customers' emotions and opinions about their products, services, or brand".</p>
+                <span>- Pavan</span>
+            </div>
+            <div class="testimonial">
+                <p>"Using these Analysis, you can devise ways to make a better connection with your customer's."</p>
+                <span>- Gayatri</span>
+            </div>
+            <div class="testimonial">
+                <p>"It's a valuable tool for reputation management and crisis response."</p>
+                <span>- Sunny</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3 id="about">Sentiment Analysis</h3> <!-- Added ID -->
+                <p>Sentiment analysis is the process of analyzing digital text to determine if the emotional tone of the message is positive, negative, or neutral.</p>
+                <p>Today, companies have large volumes of text data like emails, customer support chat transcripts, social media comments, and reviews.</p>
+            </div>
+            <div class="footer-right">
+                <div class="social-media">
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <p>privacy Matters</p>
+                </div>
+                <div class="contact-info">
+                    <p>Email: padalamaheshchandra72@gmail.com</p>
+                    <p>Phone: +91 9866524298</p>
+                    <p>Address: Kakinada, Andhra Pradesh-533016</p>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">
+            2024 @All Rights Reserved By Mahesh
+        </p>
+    </footer>
+</body>
+</html>

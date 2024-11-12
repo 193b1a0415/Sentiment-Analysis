@@ -1,0 +1,256 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Set background image properties */
+            background-image: url('/static/po.webp'); /* Replace 'background-image.jpg' with your image file */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the background image */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 20px;
+            color: white;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: url('45.webp') no-repeat center center/cover;
+            text-align: center;
+            color:#ffa64d;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            margin-left: 40px; /* Move the <h1> element slightly to the right */
+        }
+
+        .hero .cta {
+            background-color: #ff4500;
+            color: yellow;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .features, .how-it-works, .input-section, .data-visualization, .detailed-results, .user-interaction, .testimonials {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .features .feature-cards, .how-it-works .steps, .data-visualization .charts, .detailed-results .details, .testimonials .testimonials-list {
+            display: flex;
+            color: black;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .feature-cards .card, .steps .step, .charts .chart, .details .detail, .testimonials .testimonial {
+            background-color: #ffff99;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        .feature-cards .card h3 {
+            color: Black; /* Set heading color */
+        }
+
+        .feature-cards .card p {
+            color: #cc33ff; /* Set content color */
+        }
+
+        .input-section {
+            margin-top: 20px;
+        }
+
+        .input-section h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+       
+        input[type="text"] {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+         button[type="submit"] {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #66c2ff;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #cc0066;;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        
+        /* Testimonials Section */
+
+.testimonials {
+    background-image: url('/static/hd.jpg'); /* Add your background image path */
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    text-align: center;
+    color: #ffffff; /* Change text color to white for better contrast */
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.testimonials-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows the items to wrap on smaller screens */
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px; /* Ensures the testimonials do not become too wide */
+    width: 100%;
+    text-align: left;
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #555;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+    
+   /* Footer Section */
+        footer {
+            background-color: #333; /* Change to the desired background color */
+            color: #cc9900;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-left {
+            flex: 1;
+            text-align: left;
+        }
+
+        .footer-left h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-left p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .footer-right {
+            flex: 1;
+            text-align: right;
+        }
+
+        .social-media {
+            margin-bottom: 20px;
+        }
+
+        .social-media a {
+            font-size: 24px;
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #007bff;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .copyright {
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>

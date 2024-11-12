@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #009933;
+            --accent-color: #fc0f03;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+            --header-background-color: #fc0f03;
+            --header-text-color: #fff;
+            --footer-background-color: #333;
+            --footer-text-color: #fff;
+            --overlay-color: rgba(0, 0, 0, 0.5);
+        }
+
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-image: url('/static/cv.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #990033;
+    line-height: 1.6;
+   }
+
+        header {
+            background-color: #990033;
+            color: var(--header-text-color);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .about-section,
+        .team-section {
+            padding: 60px 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 900px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            color: var(--text-color);
+        }
+
+        .about-section {
+            background-image: url('/static/vl.jpg'); /* Add your image path here */
+            background-size: cover;
+            background-position: center;
+            color: #009933;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--overlay-color);
+            z-index: 1;
+            border-radius: 10px;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-section h1,
+        .about-section p,
+        .about-section h2,
+        .about-section ul {
+            color: #fff;
+        }
+
+        .about-section ul li {
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            color: #009933;
+        }
+
+        .team-section {
+            background-image: url('/static/k.jpg'); /* Add your image path here */
+            background-size: cover;
+            background-position: center;
+            color: #000000;
+        }
+
+        .team-section h2 {
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        .team-member {
+            margin: 40px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 20px;
+            background-color: var(--footer-background-color);
+            color: var(--footer-text-color);
+            flex-wrap: wrap;
+        }
+
+        .footer-left, .footer-right {
+            width: 45%;
+            margin: 20px 0;
+        }
+
+        .footer-left h3, .footer-right h3 {
+            margin-bottom: 20px;
+        }
+
+        .footer-left p, .footer-right p {
+            margin: 5px 0;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: var(--footer-text-color);
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .social-media a:hover {
+            color: #ddd;
+        }
+
+       .interesting-topic p {
+            margin: 5px 0;
+        }
+
+        .interesting-topic h3 {
+            margin-bottom: 20px;
+        }
+
+        .interesting-topic ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .interesting-topic ul li {
+            margin-bottom: 10px;
+        }
+
+        .interesting-topic ul li a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .interesting-topic ul li a:hover {
+            color: #ff0066;
+        }
+
+        .interesting-topic p {
+            color: #ffcc00;
+        }
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Sentiment Analyzer</div>
+        <nav>
+            <ul>
+                <li><a href="/index">Home</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h1>About Us</h1>
+            <p>Welcome to Sentiment Analyzer! We are dedicated to providing cutting-edge sentiment analysis tools for businesses and individuals. Our mission is to help you understand and utilize the power of customer feedback through advanced sentiment analysis techniques.</p>
+            <h2>Tools and Technologies Used</h2>
+            <ul>
+                <li>Python: The core programming language used for building the sentiment analysis algorithms.</li>
+                <li>Flask: A lightweight web framework for developing the web application.</li>
+                <li>NLTK (Natural Language Toolkit): Used for text processing and sentiment analysis.</li>
+                <li>Scikit-learn: For implementing machine learning models.</li>
+                <li>HTML, CSS: For the frontend design and user interface.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <h2>Developer</h2>
+        <div class="team-member">
+            <h3>Chandra Mahesh Padala</h3>
+            <p>#The Developer of this Website#</p>
+            <p>Chandra Mahesh Padala is an Aspiring Data Analyst with Good Knowledge in natural language processing and data science and Mahesh has been instrumental in developing cutting-edge tools that help businesses leverage sentiment analysis to understand customer feedback and drive growth.</p>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>#External Links#</h3>
+                <div class="interesting-topic">
+                    <ul>
+                        <li><a href="https://sproutsocial.com/insights/sentiment-analysis-marketing/">www.The Role of Sentiment Analysis in Marketing.com</a></li>
+                        <li><a href="https://www.voxco.com/blog/sentiment-analysis-helps-improve-customer-experience/">www.How Sentiment Analysis Improves Customer Service.com</a></li>
+                        <li><a href="https://maveric-systems.com/blog/sentiment-analysis-in-banking/">www.Sentiment Analysis in Financial Markets.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h3>#Info#</h3>
+                <p>This is all about this project signing off..</p>
+                <h3> Have a good Day</h3>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
